@@ -61,7 +61,6 @@ class Server:
         next_page = page + 1 if end_index < len(dataset) else None
         prev_page = page - 1 if start_index > 0 else None
         return {
-            'len_data': len(dataset),
             'page_size': len(data),
             'page': page,
             'data': data,
