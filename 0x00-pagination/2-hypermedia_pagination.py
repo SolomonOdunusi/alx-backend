@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """get_hyper_index module"""
 import csv
-from typing import List
+from typing import List, Dict, Tuple
 
 
-def index_range(page: int, page_size: int) -> tuple:
+def index_range(page: int, page_size: int) -> Tuple:
     """Calculate start and end indices for pagination."""
 
     start_index = (page - 1) * page_size
@@ -42,7 +42,7 @@ class Server:
         dataset = self.dataset()
         return dataset[start_index:end_index]
 
-    def get_hyper(self, page: int = 1, page_size: int = 10) -> List[List]:
+    def get_hyper(self, page: int = 1, page_size: int = 10) -> Dict:
         """
         Implement a get_hyper method
         Return:
