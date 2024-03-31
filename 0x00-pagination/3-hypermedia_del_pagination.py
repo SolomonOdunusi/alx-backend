@@ -13,7 +13,7 @@ class Server:
     """
     Server class to paginate
     """
-    DATA_FILE = "baby.csv"
+    DATA_FILE = "Popular_Baby_Names.csv"
 
     def __init__(self):
         self.__dataset = None
