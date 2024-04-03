@@ -12,7 +12,7 @@ class FIFOCache(BaseCaching):
         """Input the data into the cache"""
         if key is None or item is None:
             return
-        if BaseCaching.MAX_ITEMS <= len(self.cache_data):
+        if len(self.cache_data) > self.MAX_ITEMS:
             first_item = next(iter(self.cache_data))
             print("DISCARD: ", first_item)
             del self.cache_data[first_item]
